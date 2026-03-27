@@ -1,0 +1,124 @@
+:root {
+  --bg: #f5f5f5;
+  --text: #333;
+  --card: #ffffff;
+  --nav: #444;
+  --header: #222;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f5f5f5;
+  --card: #1e1e1e;
+  --nav: #1a1a1a;
+  --header: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  background: var(--header);
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: center; /* menu stays center */
+  align-items: center;
+  background: var(--nav);
+  padding: 10px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 10px;
+}
+
+#themeToggle {
+  position: absolute;
+  right: 15px;
+}
+
+nav a, nav button {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+nav a:hover, nav button:hover {
+  background: #666;
+  border-radius: 5px;
+}
+
+section {
+  display: none;
+  padding: 20px;
+}
+
+section.active {
+  display: block;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hobby {
+  margin-top: 15px;
+}
+
+.hobby img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: var(--header);
+  color: white;
+  margin-top: 20px;
+}
+
+
+#hobbies {
+  text-align: center;
+}
+
+#hobbies .hobby {
+  display: inline-block;      /* place boxes side by side */
+  margin: 15px;               /* spacing between hobby boxes */
+  vertical-align: top;        /* align tops of boxes */
+  width: 200px;               /* fixed width for each hobby box */
+}
+
+#hobbies .hobby img {
+  width: 100%;                /* image fills the box width */
+  height: auto;               /* keeps original aspect ratio */
+  border-radius: 10px;        /* rounded corners */
+}
+
+#hobbies .hobby p {
+  margin: 5px 0;              /* spacing for text */
+}
